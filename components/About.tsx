@@ -12,7 +12,7 @@ export default function About() {
                 <span className="av-sub">Annual Gala</span>
               </div>
               <div className="av-stat">
-                <span className="av-num">500+</span>
+                <span className="av-num">450</span>
                 <span className="av-sub">Guests Expected</span>
               </div>
               <div className="av-stat">
@@ -38,7 +38,13 @@ export default function About() {
           <p className="reveal d2 lead">
             Building on a remarkable first year, our second gathering reaches further — funding mental health, substance recovery, surgical access and education for those who need it most.
           </p>
-          <Link 
+          <p className="reveal d2 about-chci">
+            The Illuminate Life Gala is presented by{' '}
+            <a href="https://www.conciergehealthcareinternational.com/" target="_blank" rel="noopener noreferrer">
+              Concierge Health Care International
+            </a>.
+          </p>
+          <Link
             href="#tickets" 
             className="btn-primary reveal d3" 
             style={{ display: 'inline-block', marginTop: '28px' }}

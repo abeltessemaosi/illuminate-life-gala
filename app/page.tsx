@@ -1,12 +1,12 @@
 import Navigation from '@/components/Navigation';
-import Hero from '@/components/Hero';
+import HeroFilmStack from '@/components/HeroFilmStack';
+import GalleryTeaser from '@/components/GalleryTeaser';
 import Countdown from '@/components/Countdown';
 import About from '@/components/About';
 import Programs from '@/components/Programs';
 import Experience from '@/components/Experience';
 import Tickets from '@/components/Tickets';
 import Sponsors from '@/components/Sponsors';
-import DrErsnoSection3 from '@/components/DrErsnoSection3';
 import Contact from '@/components/Contact';
 import Partners from '@/components/Partners';
 import Footer from '@/components/Footer';
@@ -24,10 +24,9 @@ export default function Home() {
     alternateName: [
       'Illuminate Life Gala Beverly Hills',
       'Second Annual Illuminate Life Gala',
-      'Dr. Ersno Eromo Gala',
     ],
     description:
-      'The Second Annual Illuminate Life Gala. A philanthropic evening for mental health, recovery, and surgical access for underserved communities. Join Dr. Ersno Eromo at The Beverly Hilton for this prestigious healthcare charity event.',
+      'The Second Annual Illuminate Life Gala. A philanthropic evening for mental health, recovery, and surgical access for underserved communities, presented by Concierge Health Care International at The Beverly Hilton.',
     startDate: '2026-10-15T18:00:00-07:00',
     endDate: '2026-10-15T23:00:00-07:00',
     eventStatus: 'https://schema.org/EventScheduled',
@@ -49,24 +48,16 @@ export default function Home() {
         longitude: '-118.4028',
       },
     },
-    image: ['/modified.png'],
+    image: ['/icon.svg'],
     organizer: {
       '@type': 'Organization',
-      name: 'Illuminate Life Foundation',
-      url: 'https://illuminatelifegala.com',
+      name: 'Concierge Health Care International',
+      url: 'https://www.conciergehealthcareinternational.com/',
       sameAs: [
         'https://twitter.com/illuminatelife',
         'https://facebook.com/illuminatelife',
         'https://linkedin.com/company/illuminatelife',
       ],
-    },
-    performer: {
-      '@type': 'Person',
-      name: 'Dr. Ersno Eromo',
-      jobTitle: 'Physician and Humanitarian Leader',
-      description:
-        'Distinguished physician dedicated to transforming healthcare access for underserved communities',
-      image: '/modified.png',
     },
     offers: {
       '@type': 'Offer',
@@ -80,7 +71,6 @@ export default function Home() {
       'mental health gala Beverly Hills',
       'charity gala Beverly Hills 2026',
       'healthcare philanthropy event Los Angeles',
-      'Dr Ersno Eromo gala',
       'medical fundraiser Beverly Hills',
       'philanthropic event California',
       'substance recovery fundraiser',
@@ -131,14 +121,6 @@ export default function Home() {
       },
       {
         '@type': 'Question',
-        name: 'Who is Dr. Ersno Eromo?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Dr. Ersno Eromo is a distinguished physician and humanitarian leader who founded the Illuminate Life Gala. He has dedicated over 25 years to transforming healthcare access for underserved communities, impacting more than 10,000 lives across 50+ communities. Dr. Eromo\'s innovative programs focus on mental health, substance recovery, surgical access, and healthcare education for those in need.',
-        },
-      },
-      {
-        '@type': 'Question',
         name: 'How are Illuminate Life Gala proceeds used?',
         acceptedAnswer: {
           '@type': 'Answer',
@@ -178,14 +160,14 @@ export default function Home() {
       />
       <CustomCursor />
       <Navigation />
-      <Hero />
+      <HeroFilmStack />
       <Countdown />
       <About />
       <Programs />
       <Experience />
       <Tickets />
+      <GalleryTeaser />
       <Sponsors />
-      <DrErsnoSection3 />
       <Contact />
       <Partners />
       <Footer />

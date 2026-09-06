@@ -50,7 +50,7 @@ export default function Sponsors() {
           <p className="sec-label reveal">Partner With Us</p>
           <h2 className="sec-title reveal">Sponsorship <em>opportunities</em></h2>
           <p className="sp-intro reveal">
-            Align your brand with purpose. Join 500+ philanthropic leaders, executives, and changemakers for an evening that leaves a lasting legacy.
+            Align your brand with purpose. Join 450 philanthropic leaders, executives, and changemakers for an evening that leaves a lasting legacy.
           </p>
         </div>
         <div className="sp-tiers reveal">

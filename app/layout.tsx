@@ -1,16 +1,14 @@
 import type { Metadata } from 'next';
 import './globals.css';
-import './dr-ersno-sections.css';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://illuminatelifegala.com'),
-  title: 'Illuminate Life Gala 2026 | Mental Health & Healthcare Charity Event Beverly Hills',
+  title: 'Illuminate Life Gala 2026 | October 15 at The Beverly Hilton',
   description: 'The Second Annual Illuminate Life Gala returns October 15, 2026 at The Beverly Hilton. An elegant philanthropic evening uniting leaders to support mental health, substance recovery, and surgical access for underserved communities in Los Angeles.',
   keywords: [
     'mental health gala Beverly Hills',
     'charity gala Beverly Hills 2026',
     'healthcare philanthropy event Los Angeles',
-    'Dr Ersno Eromo gala',
     'medical fundraiser Beverly Hills',
     'Illuminate Life Gala',
     'philanthropic event California',
@@ -23,9 +21,9 @@ export const metadata: Metadata = {
     'charity event October 2026',
     'Beverly Hills fundraiser',
   ],
-  authors: [{ name: 'Dr. Ersno Eromo' }],
-  creator: 'Illuminate Life Foundation',
-  publisher: 'Illuminate Life Foundation',
+  authors: [{ name: 'Concierge Health Care International' }],
+  creator: 'Concierge Health Care International',
+  publisher: 'Concierge Health Care International',
   openGraph: {
     title: 'Illuminate Life Gala 2026 | October 15 at The Beverly Hilton',
     description: 'The Second Annual Illuminate Life Gala brings together visionaries and philanthropists for an elegant evening supporting mental health, substance recovery, and surgical access. October 15, 2026 at The Beverly Hilton, Beverly Hills.',
@@ -33,21 +31,11 @@ export const metadata: Metadata = {
     siteName: 'Illuminate Life Gala',
     locale: 'en_US',
     type: 'website',
-    images: [
-      {
-        url: '/icon.svg',
-        width: 1200,
-        height: 630,
-        alt: 'Illuminate Life Gala 2026 - A Philanthropic Evening at The Beverly Hilton',
-      },
-    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Illuminate Life Gala 2026 | October 15 at The Beverly Hilton',
     description: 'An elegant philanthropic evening supporting mental health, substance recovery, and surgical access for underserved communities. Join us October 15, 2026.',
-    images: ['/icon.svg'],
-    creator: '@illuminatelife',
   },
   robots: {
     index: true,
@@ -92,11 +80,11 @@ export default function RootLayout({
         
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
-          href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Tenor+Sans&family=Cinzel:wght@400;500;600&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Outfit:wght@300;400;500;600&family=Cinzel:wght@400;500;600&display=swap"
           rel="stylesheet"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
-        <meta name="theme-color" content="#08080D" />
+        <meta name="theme-color" content="#000000" />
         <link rel="icon" href="/icon.svg" type="image/svg+xml" />
       </head>
       <body suppressHydrationWarning>{children}</body>

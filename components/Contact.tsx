@@ -8,6 +8,12 @@ const INTEREST_OPTIONS = [
   { value: 'sponsor_beacon', label: 'Beacon Gold Sponsor — $25,000', type: 'sponsor', tier: 'Beacon Gold — $25,000' },
   { value: 'sponsor_radiance', label: 'Radiance Silver Sponsor — $10,000', type: 'sponsor', tier: 'Radiance Silver — $10,000' },
   { value: 'sponsor_spark', label: 'Spark Community Sponsor — $5,000', type: 'sponsor', tier: 'Spark Community — $5,000' },
+  { value: 'tickets_individual', label: 'Individual Tickets', type: 'general' },
+  { value: 'tickets_table', label: 'Table Purchase', type: 'general' },
+  { value: 'media_press', label: 'Media & Press', type: 'general' },
+  { value: 'volunteer', label: 'Volunteer', type: 'general' },
+  { value: 'donation', label: 'Donation', type: 'general' },
+  { value: 'honoree_awards', label: 'Honoree / Awards Inquiry', type: 'general' },
   { value: 'general', label: 'General Inquiry', type: 'general' },
 ];
 
@@ -157,7 +163,7 @@ export default function Contact() {
             </div>
             <div>
               <p className="ct-label">Dress Code</p>
-              <p className="ct-value">Black Tie Optional</p>
+              <p className="ct-value">Black Tie</p>
             </div>
           </div>
         </div>
@@ -248,6 +254,14 @@ export default function Contact() {
                 <option value="sponsor_beacon">Beacon Gold Sponsor — $25,000</option>
                 <option value="sponsor_radiance">Radiance Silver Sponsor — $10,000</option>
                 <option value="sponsor_spark">Spark Community Sponsor — $5,000</option>
+              </optgroup>
+              <optgroup label="Attendance & Involvement">
+                <option value="tickets_individual">Individual Tickets</option>
+                <option value="tickets_table">Table Purchase</option>
+                <option value="volunteer">Volunteer</option>
+                <option value="donation">Donation</option>
+                <option value="media_press">Media &amp; Press</option>
+                <option value="honoree_awards">Honoree / Awards Inquiry</option>
               </optgroup>
               <option value="general">General Inquiry</option>
             </select>

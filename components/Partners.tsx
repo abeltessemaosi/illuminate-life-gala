@@ -3,13 +3,13 @@
 import Image from 'next/image';
 
 const partners = [
-  { name: 'Eromo Ventures', logo: '/EV.png' },
-  { name: 'Concierge Healthcare Partners', logo: '/CHP.png' },
-  { name: 'Tori Avey', logo: '/Tori avey logo.psd.png' },
-  { name: 'Levy Eromo Media', logo: '/LEM.png' },
-  { name: 'Music Maven', logo: '/MM.png' },
-  { name: 'Consortium Capital Holdings', logo: '/CCH.png' },
-  { name: 'Shuki & Tori Levy Foundation', logo: '/STF.png' },
+  { name: 'Eromo Ventures', logo: '/EV.png', url: 'https://www.eromoventures.com/' },
+  { name: 'Concierge Healthcare Partners', logo: '/CHP.png', url: 'https://www.conciergehealthcarepartnersinc.com/' },
+  { name: 'Tori Avey', logo: '/tori-avey.png', url: 'https://toriavey.com/' },
+  { name: 'Levy Eromo Media', logo: '/LEM.png', url: 'https://www.levyeromomedia.com/' },
+  { name: 'Music Maven', logo: '/MM.png', url: 'https://www.musicmaven.com/about-us' },
+  { name: 'Consortium Capital Holdings', logo: '/CCH.png', url: 'https://www.consortiumcapitalholdings.com/' },
+  { name: 'Shuki & Tori Levy Foundation', logo: '/STF.png', url: 'https://www.levyfoundation.org/' },
 ];
 
 export default function Partners() {
@@ -21,11 +21,23 @@ export default function Partners() {
           <div className="partners-rule" />
         </div>
 
+        <div className="partners-presented reveal">
+          <p className="partners-presented-label">Presented by</p>
+          <a
+            href="https://www.conciergehealthcareinternational.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="partners-presented-logo"
+          >
+            <Image src="/invitelogo.avif" alt="Concierge Healthcare International" width={178} height={61} />
+          </a>
+        </div>
+
         <div className="partners-grid reveal">
           {/* Row 1 — 3 logos */}
           <div className="partners-row">
             {partners.slice(0, 3).map((p) => (
-              <div key={p.name} className="partner-logo-wrap">
+              <a key={p.name} href={p.url} target="_blank" rel="noopener noreferrer" className="partner-logo-wrap" aria-label={p.name}>
                 <Image
                   src={p.logo}
                   alt={p.name}
@@ -33,14 +45,14 @@ export default function Partners() {
                   height={90}
                   style={{ objectFit: 'contain', filter: 'brightness(0) invert(1)' }}
                 />
-              </div>
+              </a>
             ))}
           </div>
 
           {/* Row 2 — 3 logos */}
           <div className="partners-row">
             {partners.slice(3, 6).map((p) => (
-              <div key={p.name} className="partner-logo-wrap">
+              <a key={p.name} href={p.url} target="_blank" rel="noopener noreferrer" className="partner-logo-wrap" aria-label={p.name}>
                 <Image
                   src={p.logo}
                   alt={p.name}
@@ -48,14 +60,14 @@ export default function Partners() {
                   height={90}
                   style={{ objectFit: 'contain', filter: 'brightness(0) invert(1)' }}
                 />
-              </div>
+              </a>
             ))}
           </div>
 
           {/* Row 3 — 1 logo centered */}
           <div className="partners-row partners-row-center">
             {partners.slice(6).map((p) => (
-              <div key={p.name} className="partner-logo-wrap">
+              <a key={p.name} href={p.url} target="_blank" rel="noopener noreferrer" className="partner-logo-wrap" aria-label={p.name}>
                 <Image
                   src={p.logo}
                   alt={p.name}
@@ -63,7 +75,7 @@ export default function Partners() {
                   height={130}
                   style={{ objectFit: 'contain', filter: 'brightness(0) invert(1)' }}
                 />
-              </div>
+              </a>
             ))}
           </div>
         </div>
