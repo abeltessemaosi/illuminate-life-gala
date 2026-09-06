@@ -13,7 +13,8 @@ const tickets = [
       'Curated event program',
       'Access to all installations'
     ],
-    featured: false
+    featured: false,
+    stripeUrl: 'https://buy.stripe.com/5kQ28l9IT0bJ07N5Bv3cc00'
   },
   {
     tier: 'Table of 10',
@@ -28,7 +29,8 @@ const tickets = [
       'All Illuminator perks',
       'Personal event concierge'
     ],
-    featured: true
+    featured: true,
+    stripeUrl: 'https://buy.stripe.com/4gMdR3cV54rZaMr9RL3cc02'
   },
   {
     tier: 'VIP Individual',
@@ -43,24 +45,12 @@ const tickets = [
       'Personal concierge',
       'All Illuminator perks'
     ],
-    featured: false
+    featured: false,
+    stripeUrl: 'https://buy.stripe.com/7sY4gtaMXbUr9Ingg93cc01'
   }
 ];
 
 export default function Tickets() {
-  const openModal = (tier: string, tierName: string, price: string, quantity: number) => {
-    // Modal logic will be handled by TicketModal component
-    const event = new CustomEvent('openTicketModal', {
-      detail: {
-        tier,
-        tierName,
-        price,
-        quantity
-      }
-    });
-    window.dispatchEvent(event);
-  };
-
   return (
     <div id="tickets" className="tickets-wrap">
       <div className="tickets-inner">
@@ -88,12 +78,9 @@ export default function Tickets() {
                   <li key={perk} className="tix-perk">{perk}</li>
                 ))}
               </ul>
-              <button
-                onClick={() => openModal(ticket.tier, ticket.name.replace('\n', ' '), ticket.price, ticket.quantity)}
-                className="tix-btn"
-              >
+              <a href={ticket.stripeUrl} className="tix-btn">
                 {ticket.featured ? 'Reserve Table' : 'Reserve Seat'}
-              </button>
+              </a>
             </div>
           ))}
         </div>
