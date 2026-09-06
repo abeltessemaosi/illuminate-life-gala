@@ -36,7 +36,7 @@ export default function Hero() {
             October 15, 2026
           </span>
         </div>
-        <p className="hero-eyebrow">Second Annual &nbsp;·&nbsp; Philanthropic Gala &nbsp;·&nbsp; Beverly Hills</p>
+        <p className="hero-eyebrow">Second Annual Philanthropic Gala</p>
         <h1 className="hero-title">
           Illuminate Life<br />
           <em>Gala</em>
