@@ -4,7 +4,7 @@ const tickets = [
   {
     tier: 'Individual',
     name: 'Illuminator\nExperience',
-    price: '750',
+    price: '500',
     quantity: 1,
     perks: [
       'Gourmet dinner & wine pairings',
