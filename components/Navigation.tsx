@@ -65,7 +65,7 @@ export default function Navigation() {
           <li><Link href="/#programs" onClick={(e) => scrollToSection(e, '#programs')}>Programs</Link></li>
           <li><Link href="/#experience" onClick={(e) => scrollToSection(e, '#experience')}>Evening</Link></li>
           <li><Link href="/#tickets" onClick={(e) => scrollToSection(e, '#tickets')}>Tickets</Link></li>
-          <li><Link href="/gallery">Gallery</Link></li>
+          <li><Link href="/gallery">2024 Gala</Link></li>
           <li><Link href="/#sponsors" onClick={(e) => scrollToSection(e, '#sponsors')}>Sponsors</Link></li>
           <li><Link href="/#contact" onClick={(e) => scrollToSection(e, '#contact')}>Contact</Link></li>
         </ul>
@@ -100,7 +100,7 @@ export default function Navigation() {
             <li><Link href="/#programs" onClick={(e) => scrollToSection(e, '#programs')}>Programs</Link></li>
             <li><Link href="/#experience" onClick={(e) => scrollToSection(e, '#experience')}>Evening</Link></li>
             <li><Link href="/#tickets" onClick={(e) => scrollToSection(e, '#tickets')}>Tickets</Link></li>
-            <li><Link href="/gallery" onClick={closeMenu}>Gallery</Link></li>
+            <li><Link href="/gallery" onClick={closeMenu}>2024 Gala</Link></li>
             <li><Link href="/#sponsors" onClick={(e) => scrollToSection(e, '#sponsors')}>Sponsors</Link></li>
             <li><Link href="/#contact" onClick={(e) => scrollToSection(e, '#contact')}>Contact</Link></li>
           </ul>

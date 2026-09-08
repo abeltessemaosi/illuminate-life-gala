@@ -3,13 +3,14 @@
 import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { galleryImages } from '@/lib/galleryData';
+import { getVisibleGalleryImages, getPlaceholderImageUrl, getAltText } from '@/lib/galleryData';
 
-const teaserImages = galleryImages.slice(0, 9);
+const teaserImages = getVisibleGalleryImages().slice(0, 9);
 const HALF = Math.floor(teaserImages.length / 2);
 
 export default function GalleryTeaser() {
   const [current, setCurrent] = useState(0);
+  const [step, setStep] = useState(210);
   const prevOffsets = useRef<Record<number, number>>({});
 
   useEffect(() => {
@@ -17,6 +18,16 @@ export default function GalleryTeaser() {
       setCurrent((i) => (i + 1) % teaserImages.length);
     }, 2500);
     return () => clearInterval(id);
+  }, []);
+
+  useEffect(() => {
+    const updateStep = () => {
+      const w = window.innerWidth;
+      setStep(w <= 480 ? 140 : w <= 768 ? 165 : 210);
+    };
+    updateStep();
+    window.addEventListener('resize', updateStep);
+    return () => window.removeEventListener('resize', updateStep);
   }, []);
 
   return (
@@ -48,13 +59,19 @@ export default function GalleryTeaser() {
               key={img.id}
               className="arc-card"
               style={{
-                transform: `translateX(${offset * 210}px) translateZ(${abs * 90}px) rotateY(${offset * -20}deg) scale(${1 + abs * 0.12})`,
+                transform: `translateX(${offset * step}px) translateZ(${abs * step * 0.43}px) rotateY(${offset * -20}deg) scale(${1 + abs * 0.12})`,
                 opacity: visible ? 1 : 0,
                 zIndex: -abs,
                 transition: jumping ? 'none' : 'transform .8s cubic-bezier(.2,.8,.2,1), opacity .8s ease',
               }}
             >
-              <Image src={`https://picsum.photos/seed/${img.seed}/480/620`} alt={img.caption} width={480} height={620} />
+              <Image
+                src={img.image ?? getPlaceholderImageUrl(img, index, 480)}
+                alt={getAltText(img)}
+                width={480}
+                height={620}
+                style={{ objectPosition: img.focus ?? 'center' }}
+              />
             </div>
           );
         })}
