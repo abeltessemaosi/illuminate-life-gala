@@ -30,19 +30,6 @@ export default function Sponsors() {
   const getSponsorsForTier = (tierName: string) =>
     activeSponsors.filter((s) => s.tier.toLowerCase().includes(tierName.toLowerCase()));
 
-  const handleSlotClick = (tierName: string, amount: string, isTaken: boolean) => {
-    if (isTaken) return;
-
-    const tierValue = `${tierName} — ${amount}`;
-    sessionStorage.setItem('selectedSponsorTier', tierValue);
-    window.dispatchEvent(
-      new CustomEvent('sponsorTierSelected', { detail: { tier: tierValue } })
-    );
-
-    const contact = document.getElementById('contact');
-    if (contact) contact.scrollIntoView({ behavior: 'smooth' });
-  };
-
   return (
     <div id="sponsors" className="sponsors-wrap">
       <div className="sponsors-inner">
@@ -91,27 +78,12 @@ export default function Sponsors() {
                       )}
                     </div>
                   ))}
-
-                  {/* Show remaining available slots (only if not full) */}
-                  {availableSlots > 0 && (
-                    Array.from({ length: availableSlots }).map((_, i) => (
-                      <div
-                        key={`available-${i}`}
-                        className="sp-slot sp-slot-available"
-                        onClick={() => handleSlotClick(tier.name, tier.amount, false)}
-                        style={{ cursor: 'pointer' }}
-                        title={`Claim this ${tier.name} spot`}
-                      >
-                        Available
-                      </div>
-                    ))
-                  )}
                 </div>
               </div>
             );
           })}
         </div>
-        <div style={{ marginTop: '50px' }} className="reveal">
+        <div style={{ marginTop: '50px', display: 'flex', gap: '18px', flexWrap: 'wrap' }} className="reveal">
           <button
             className="btn-primary"
             onClick={() => {
@@ -121,6 +93,13 @@ export default function Sponsors() {
           >
             <span>Become a Sponsor</span>
           </button>
+          <a
+            href="/ILG_Sponsorship_Deck.pdf"
+            download
+            className="btn-ghost"
+          >
+            <span>Download Sponsorship Deck</span>
+          </a>
         </div>
       </div>
     </div>
