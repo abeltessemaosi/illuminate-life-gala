@@ -29,7 +29,7 @@ export default function Partners() {
             rel="noopener noreferrer"
             className="partners-presented-logo"
           >
-            <Image src="/invitelogo.avif" alt="Concierge Healthcare International" width={178} height={61} />
+            <Image src="/invitelogo-chci.jpeg" alt="Concierge Healthcare International" width={280} height={96} />
           </a>
         </div>
 

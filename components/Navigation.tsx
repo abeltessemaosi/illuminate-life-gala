@@ -58,7 +58,7 @@ export default function Navigation() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Image src="/invitelogo.avif" alt="Concierge Healthcare International" width={178} height={61} priority />
+          <Image src="/invitelogo-chci.jpeg" alt="Concierge Healthcare International" width={196} height={67} priority />
         </Link>
         <ul className="nav-links">
           <li><Link href="/#about" onClick={(e) => scrollToSection(e, '#about')}>Mission</Link></li>

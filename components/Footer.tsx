@@ -23,7 +23,7 @@ export default function Footer() {
           className="footer-chci-logo"
           aria-label="Concierge Healthcare International"
         >
-          <Image src="/invitelogo.avif" alt="Concierge Healthcare International" width={178} height={61} />
+          <Image src="/invitelogo-chci.jpeg" alt="Concierge Healthcare International" width={196} height={67} />
         </a>
 
         <div className="footer-cta">
