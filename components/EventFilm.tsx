@@ -2,7 +2,10 @@
 
 const VIDEO_ID = '1w-kgfIJHeY';
 const YOUTUBE_URL = `https://www.youtube.com/watch?v=${VIDEO_ID}`;
-const THUMBNAIL_URL = `https://img.youtube.com/vi/${VIDEO_ID}/maxresdefault.jpg`;
+// Using a real event photo instead of YouTube's auto-generated thumbnail —
+// the video's actual thumbnail frame turned out to be a title-card slide,
+// not a usable background image.
+const BACKGROUND_IMAGE = '/gallery/band-topshelf-2.jpg';
 
 export default function EventFilm() {
   return (
@@ -10,7 +13,7 @@ export default function EventFilm() {
       <div
         className="film-video-layer"
         style={{
-          backgroundImage: `url(${THUMBNAIL_URL})`,
+          backgroundImage: `url(${BACKGROUND_IMAGE})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
