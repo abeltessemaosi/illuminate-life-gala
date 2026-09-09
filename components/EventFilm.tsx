@@ -2,36 +2,29 @@
 
 const VIDEO_ID = '1w-kgfIJHeY';
 const YOUTUBE_URL = `https://www.youtube.com/watch?v=${VIDEO_ID}`;
-// Using a real event photo instead of YouTube's auto-generated thumbnail —
-// the video's actual thumbnail frame turned out to be a title-card slide,
-// not a usable background image.
-const BACKGROUND_IMAGE = '/gallery/band-topshelf-2.jpg';
 
 export default function EventFilm() {
   return (
-    <div id="film" className="film-wrap">
-      <div
-        className="film-video-layer"
-        style={{
-          backgroundImage: `url(${BACKGROUND_IMAGE})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }}
-      />
-      <div className="film-scrim" />
+    <div id="film" className="film-simple-wrap">
+      <div className="film-simple-inner">
+        <p className="sec-label reveal">2024, Revisited</p>
+        <h2 className="sec-title reveal">The evening, <em>captured</em></h2>
+        <p className="film-simple-caption reveal">
+          Moments from the inaugural Illuminate Life Gala &middot; The Beverly Hilton
+        </p>
 
-      <div className="film-overlay">
-        <p className="film-eyebrow">2024, Revisited</p>
-        <h2 className="film-headline">The evening, <em>captured</em></h2>
-        <p className="film-caption">Moments from the inaugural Illuminate Life Gala &middot; The Beverly Hilton</p>
         <a
           href={YOUTUBE_URL}
           target="_blank"
           rel="noopener noreferrer"
-          className="btn-primary"
-          style={{ marginTop: '28px', display: 'inline-flex' }}
+          className="film-simple-btn reveal"
         >
-          <span>Watch on YouTube</span>
+          <span className="film-simple-play">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M8 5v14l11-7z" />
+            </svg>
+          </span>
+          <span>Watch the Recap on YouTube</span>
         </a>
       </div>
     </div>

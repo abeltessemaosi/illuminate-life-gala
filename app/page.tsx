@@ -1,5 +1,6 @@
 import Navigation from '@/components/Navigation';
-import HeroFilmStack from '@/components/HeroFilmStack';
+import Hero from '@/components/Hero';
+import EventFilm from '@/components/EventFilm';
 import GalleryTeaser from '@/components/GalleryTeaser';
 import Countdown from '@/components/Countdown';
 import About from '@/components/About';
@@ -160,7 +161,8 @@ export default function Home() {
       />
       <CustomCursor />
       <Navigation />
-      <HeroFilmStack />
+      <Hero />
+      <EventFilm />
       <Countdown />
       <About />
       <Programs />
